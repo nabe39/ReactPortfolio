@@ -1,0 +1,46 @@
+@use "../abstracts/" as *;
+* {
+  display: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+// @font-face {
+//   font-family: Epilogue;
+//   src: url("../assets/fonts/Epilogue/Epilogue-VariableFont_wght.ttf");
+
+//   font-weight: normal;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+body {
+  font-family: "Epilogue", sans-serif;
+  font-size: 17px;
+  line-height: 27px;
+  color: $black;
+}
+
+h1,
+h2,
+h3,
+.subtitle {
+  font-weight: 600;
+}
+h1 {
+  font-size: $sizeH1;
+  line-height: normal;
+}
+h2 {
+  font-size: $sizeH2;
+  line-height: $lineH2;
+}
+h3 {
+  font-size: $sizeH3;
+  line-height: $lineH3;
+}
+.subtitle {
+  font-size: $sizeSub;
+  line-height: $lineSub;
+}
