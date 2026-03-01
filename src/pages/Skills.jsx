@@ -9,26 +9,6 @@ import {
   Javascript,
 } from "../assets/images";
 
-const softSkills = [
-  {
-    imgSrc: attitude,
-    title: "Professional Attitude",
-    description:
-      "Takes work seriously with a strong sense of responsibility. Maintains a disciplined, focused, and respectful approach in all tasks.",
-  },
-  {
-    imgSrc: feedback,
-    title: "Receptiveness to Feedback",
-    description:
-      "Open to constructive feedback and actively uses it to improve performance, skills, and teamwork effectiveness.",
-  },
-  {
-    imgSrc: workTogether,
-    title: "Teamwork",
-    description:
-      "Respect others’ opinions and support team members to achieve shared goals.",
-  },
-];
 const techSkills = [
   {
     imgSrc: HTML,
@@ -57,16 +37,6 @@ const techSkills = [
 export default function Skills() {
   return (
     <section className="skills">
-      <div className="soft-skills cards">
-        {softSkills.map((item) => (
-          <Card
-            key={item.title}
-            imgSrc={item.imgSrc}
-            title={item.title}
-            description={item.description}
-          />
-        ))}
-      </div>
       <div className="tech-skills cards">
         {techSkills.map((item) => (
           <Card
