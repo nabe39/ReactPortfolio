@@ -2,6 +2,7 @@
 
 //----------------- HERO PAGE -------------------//
 .hero {
+  color: $white;
   //desktop
   @include flex($justify: space-between);
   .introduction {
