@@ -5,8 +5,8 @@ export default function Hero() {
     <section className="hero">
       <div className="introduction">
         <div className="text-box">
-          <h3>Developer</h3>
           <h1>VO HONG DUC</h1>
+          <h3>Developer</h3>
           <span className="text-sub">
             I have 3 years of experience working with code at university. I am
             an enthusiastic, honest, and patient person who loves to learn. I

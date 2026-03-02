@@ -1,3 +1,5 @@
+import { google, github, facebook } from "../assets/images";
+
 export default function Contact() {
   return (
     <section className="contact">
@@ -10,14 +12,15 @@ export default function Contact() {
             using Anima. Learn more at AnimaApp.com
           </span>
           <div className="contact-social">
-            <include
-              src="./components/list-icon.html"
-              locals='{"list":[
-            {"icon":"facebook-icon.svg"},
-            {"icon":"google-icon.svg"},
-            {"icon":"githup-icon.svg"}
-            ]}'
-            ></include>
+            <figure>
+              <img src={facebook} alt="facebook" class="img-main" />
+            </figure>
+            <figure>
+              <img src={github} alt="github" class="img-main" />
+            </figure>
+            <figure>
+              <img src={google} alt="google" class="img-main" />
+            </figure>
           </div>
         </div>
         <form className="form">
