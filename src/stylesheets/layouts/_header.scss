@@ -1,7 +1,12 @@
 @use "../abstracts/" as *;
 
 // ---------- HEADER ---------------//
-
+.container-header {
+  background-color: $primary_color;
+  @include flex($direction: column);
+  gap: 100px;
+  padding: 0 50px 50px 50px;
+}
 header {
   // desktop
   @include flex($justify: space-between, $align: center);
@@ -32,39 +37,55 @@ header {
       li {
         list-style: none;
         @include flex($justify: space-between);
+        position: relative;
+        border-radius: 8px;
+        padding: 0 10px;
+
+        // tạo "khối nền" nhưng không ảnh hưởng layout
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 0; // phủ đúng kích thước li
+          background: $second_color;
+          border-radius: 8px;
+          opacity: 0;
+          transform: scale(0.95);
+          transition:
+            opacity 0.2s ease,
+            transform 0.2s ease;
+          z-index: 0;
+        }
+
         a {
+          position: relative;
+          z-index: 1; // chữ nằm trên "khối nền"
+          display: inline-flex;
+          align-items: center;
+
           text-decoration: none;
-          color: $black;
-          // font-weight: 600;
+          color: $white;
           line-height: 42px;
           font-size: $sizeSub;
           white-space: nowrap;
-
+          transition:
+            transform 0.2s ease,
+            color 0.2s ease;
+            
           &:hover {
-            color: #007bff;
-            background-color: rgba(0, 123, 255, 0.1);
+            color: $second_color;
             transform: translateY(-2px);
-            padding: 10px;
-            border-radius: 10px;
           }
+        }
 
-          // Active/current page effect
-          &.active {
-            color: #007bff;
-            font-weight: 600;
-
-            &::after {
-              content: "";
-              position: absolute;
-              bottom: 0;
-              left: 50%;
-              width: 80%;
-              height: 2px;
-              background: #007bff;
-              transform: translateX(-50%);
-              border-radius: 2px;
-            }
-          }
+        // Active/current page effect
+        &.active a:hover {
+          color: $white; // giữ nguyên màu chữ khi active
+          transform: none; // không nhấc lên
+          cursor: default; // optional
+        }
+        &.active::after {
+          opacity: 1;
+          transform: scale(1);
         }
       }
     }
@@ -73,11 +94,22 @@ header {
   .link-direct-mobile {
     display: none;
   }
-
-  // mobile
-  @include mobile {
+}
+@include tablet {
+  header {
     .img-main {
-      width: 30%;
+      display: none;
+    }
+  }
+}
+// mobile
+@include mobile {
+  .img-main {
+    width: 30%;
+  }
+  header {
+    nav {
+      display: none;
     }
     .link-direct-mobile {
       display: flex;

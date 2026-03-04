@@ -1,8 +1,15 @@
 @use "../abstracts/" as *;
 
 // ---------- Main Layout ---------------//
-main{
-    section{
-        padding-top: 50px;
-    }
+main {
+  padding: 50px;
+  section {
+    padding-top: 50px;
+  }
+  @include tablet {
+    padding: 30px;
+  }
+  @include mobile{
+    padding: 10px;
+  }
 }

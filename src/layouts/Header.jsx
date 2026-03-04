@@ -10,7 +10,7 @@ export default function Header() {
         </a>
       </figure>
 
-      <Navbar items={["About me", "Skills", "Projects", "Contact Me"]}/>
+      <Navbar items={["About me" , "Skills", "Projects", "Contact Me"]}/>
 
       <figure className="link-direct-mobile">
         <img src={icMobile} alt="ic_plus_mobile" className="img-main" />
