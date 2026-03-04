@@ -2,45 +2,26 @@
 
 //----------- Skills Page ------------//
 .skills {
-  @include flex($direction: column, $justify: stretch);
-  .soft-skills {
-    .skills-card {
-      gap: 10px;
-      figure {
-        max-width: 100px;
-      }
-      .text-wrapper {
-        align-items: center;
-        span {
-          text-align: center;
-        }
-      }
-    }
+  @include flex($direction: column, $justify: stretch, $gap: 40px);
 
-    @include mobile {
-      display: none;
-    }
-  }
-
-  hr {
-    border: none;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #ddd, transparent);
-    margin: 40px 0;
-    @include mobile {
-      margin: 24px 0;
-      height: 1px;
-    }
+  .title {
+    font-weight: 700;
+    font-size: $sizeH3;
   }
 
   .tech-skills {
-    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 60px;
 
     .skills-card {
-      @include flex($direction: row, $gap: 30px, $align: flex-start);
+      @include flex($direction: column, $align: flex-start, $gap: 20px);
       figure {
-        max-width: 100px;
+        max-width: 50px;
+        max-height: 50px ;
+        img{
+          width: 100%;
+        }
       }
       .text-wrapper {
         figcaption {
