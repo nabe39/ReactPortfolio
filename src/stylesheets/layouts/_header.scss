@@ -70,12 +70,7 @@ header {
           transition:
             transform 0.2s ease,
             color 0.2s ease;
-
-          // &:hover::after {
-          //   opacity: 1;
-          //   transform: scale(1);
-          // }
-
+            
           &:hover {
             color: $second_color;
             transform: translateY(-2px);
