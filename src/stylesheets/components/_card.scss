@@ -18,11 +18,13 @@
     height: 100%;
     transition: all 0.3s ease;
     figure {
-      width: 100%;
+      max-width: 100%;
       height: auto;
       img {
+        display: block;
         width: 100%;
-        object-fit: fill;
+        height: auto;
+        object-fit: contain;
       }
     }
 
@@ -31,10 +33,11 @@
       flex-direction: column;
       figcaption {
         display: -webkit-box;
-        -webkit-line-clamp: 2; /* Giới hạn 3 dòng */
+        -webkit-line-clamp: 1; /* Giới hạn 1 dòng */
         -webkit-box-orient: vertical;
         overflow: hidden; /* Ẩn phần dư */
         font-weight: 600;
+        font-size: $sizeSub;
       }
       span {
         display: -webkit-box;

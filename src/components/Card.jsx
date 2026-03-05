@@ -7,7 +7,7 @@ export default function Card({ imgSrc, title, description }) {
         </figure>
       ) : null}
       <div className="text-wrapper">
-        <h3 className="card_title">{title}</h3>
+        <figcaption className="card_title">{title}</figcaption>
         <span className="card_desc">{description}</span>
       </div>
       <button class="btn">Detail</button>
