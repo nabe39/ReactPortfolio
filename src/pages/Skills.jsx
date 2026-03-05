@@ -1,11 +1,8 @@
 import Card from "../components/Card";
 import {
-  attitude,
-  feedback,
-  workTogether,
   HTML,
   CSS,
-  GitHub,
+  github,
   Javascript,
 } from "../assets/images";
 
@@ -20,23 +17,24 @@ const techSkills = [
     imgSrc: CSS,
     title: "CSS & SASS",
     description:
-      "OCan style web pages with colors, fonts, spacing, and layout. Knows how to use selectors, classes, and IDs. Able to build basic responsive designs using Flexbox and Grid.",
+      "Can style web pages with colors, fonts, spacing, and layout. Knows how to use selectors, classes, and IDs. Able to build basic responsive designs using Flexbox and Grid.",
   },
   {
-    imgSrc: GitHub,
+    imgSrc: github,
     title: "Git & GitHub",
     description:
       "Can use Git to track code changes, commit updates, and work with repositories. Knows basic commands like git add, commit, push, and pull. Able to collaborate using GitHub.",
   },
   {
     imgSrc: Javascript,
-    title: "JavaScript",
+    title: "Javascript",
     description: "Comming soon....",
   },
 ];
 export default function Skills() {
   return (
     <section className="skills">
+      <span className="title">Skills</span>
       <div className="tech-skills cards">
         {techSkills.map((item) => (
           <Card

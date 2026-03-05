@@ -3,10 +3,10 @@
 //------------- Project Page --------------//
 
 .projects {
-  @include flex($direction: column, $gap: 40px, $align: center);
+  @include flex($direction: column, $gap: 40px, $align: flex-start);
 
   .title {
-    font-weight: 600;
+    font-weight: 700;
     font-size: $sizeH3;
   }
   .project-cards {

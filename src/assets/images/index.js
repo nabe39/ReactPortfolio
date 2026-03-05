@@ -6,7 +6,7 @@ import feedback from "./feedback.svg";
 import workTogether from "./work_together.svg";
 import HTML from "./html-icon.svg";
 import CSS from "./css-icon.svg";
-import GitHub from "./git-icon.svg";
+import Git from "./git-icon.svg";
 import Javascript from "./javascript-icon.svg";
 import project1 from "./project1.png";
 import project2 from "./project2.png";
@@ -23,7 +23,7 @@ export {
   workTogether,
   HTML,
   CSS,
-  GitHub,
+  Git,
   Javascript,
   project1,
   project2,
