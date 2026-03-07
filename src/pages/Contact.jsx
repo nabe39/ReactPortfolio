@@ -3,15 +3,34 @@ import { google, github, facebook } from "../assets/images";
 export default function Contact() {
   return (
     <section className="contact">
-      <span className="title">Let work together</span>
+      <span className="title">Let's work together</span>
       <div className="contact-context">
-        <div className="context">
-          <span>
-            This is a template Figma file, turned into code using Anima. Learn
-            more at AnimaApp.com This is a template Figma file, turned into code
-            using Anima. Learn more at AnimaApp.com
-          </span>
-          <div className="contact-social">
+        <form className="form">
+          <div className="form-group">
+            <label htmlFor="" className="title-label">
+              Name
+            </label>
+            <input type="text" name="name" placeholder="Name" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="" className="title-label">
+              Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              placeholder="email@gmail.com"
+              required
+            />
+          </div>
+          <button className="btn">Submit</button>
+        </form>
+        <div className="contact-social">
+          <label htmlFor="" className="title-label">
+            {" "}
+            Social-contact
+          </label>
+          <div className="icon">
             <figure>
               <img src={facebook} alt="facebook" class="img-main" />
             </figure>
@@ -23,20 +42,6 @@ export default function Contact() {
             </figure>
           </div>
         </div>
-        <form className="form">
-          <div className="form-group">
-            <input type="text" name="name" placeholder="Name" required />
-          </div>
-          <div className="form-group">
-            <input
-              type="email"
-              name="email"
-              placeholder="email@gmail.com"
-              required
-            />
-          </div>
-          <button className="btn">Submit</button>
-        </form>
       </div>
     </section>
   );
