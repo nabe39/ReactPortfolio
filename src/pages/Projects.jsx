@@ -29,7 +29,7 @@ const project = [
 export default function Projects() {
   return (
     <section className="projects">
-      <div className="title">Lastes Work</div>
+      <div className="title">Latest Work</div>
       <div className="project-cards cards">
         {project.map((item) => (
           <Card

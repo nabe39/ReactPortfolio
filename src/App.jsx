@@ -1,6 +1,6 @@
 import Header from "./layouts/Header";
 import MainLayout from "./layouts/MainLayout";
-import { Hero } from "./pages";
+import { Hero, Contact } from "./pages";
 function App() {
   return (
     <>
@@ -9,6 +9,7 @@ function App() {
         <Hero />
       </div>
       <MainLayout />
+      <Contact />
     </>
   );
 }

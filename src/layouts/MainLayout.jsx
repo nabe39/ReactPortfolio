@@ -5,7 +5,6 @@ export default function MainLayout() {
     <main>
       <Skills />
       <Projects />
-      <Contact />
     </main>
   );
 }

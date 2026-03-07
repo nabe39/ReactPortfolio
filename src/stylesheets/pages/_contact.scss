@@ -3,40 +3,55 @@
 //----------- Contact Page ----------//
 .contact {
   @include flex($direction: column, $gap: 20px);
-  .title {
+  background-color: $gray;
+  padding: 50px;
+
+  .title-label {
+    //global tag
+    font-size: 16px;
     font-weight: 600;
+  }
+
+  .title {
+    font-weight: 700;
     font-size: $sizeH3;
+    text-align: center;
   }
   &-context {
-    @include flex($gap: 100px);
-    .context {
-      @include flex($direction: column, $gap: 20px);
-      .contact-social {
-        @include flex($gap: 40px);
-        figure {
-          width: 5%;
-        }
-      }
-    }
+    @include flex($direction: column, $gap: 30px, $align: center);
     .form {
+      max-width: 800px;
       width: 100%;
-      @include flex($direction: column, $gap: 20px);
+      @include flex($direction: column, $gap: 20px, $align: center);
       .form-group {
         width: 100%;
+        @include flex($direction: column, $gap: 10px);
         input {
           width: 100%;
           padding: 16px 20px;
           border: none;
           border-radius: 8px;
-          background-color: $gray;
+          background-color: $white;
           &::placeholder {
             color: #999;
           }
 
           &:focus {
-            outline: none;
-            background-color: #efefef;
+            outline: 2px solid $second_color; // đổi màu outline
+            outline-offset: 2px;
+            background-color: white;
           }
+        }
+      }
+    }
+
+    .contact-social {
+      @include flex($direction: column, $gap: 20px, $align: center);
+      .icon {
+        @include flex($gap: 20px);
+        max-width: 200px;
+        figure {
+          max-width: 30px;
         }
       }
     }
@@ -45,26 +60,25 @@
   // Tablet{
   @include tablet {
     &-context {
-      @include flex($direction: column, $gap: 50px);
+      @include flex($direction: column);
       .form {
-        @include flex($align: center);
+        @include flex($direction: column, $align: center);
+        &-group {
+          text-align: start;
+        }
       }
     }
   }
 
   //Mobile
   @include mobile {
+    .img-main{
+      width: 100%;
+      object-fit: contain;
+    }
     @include flex($align: center);
     text-align: center;
     &-context {
-      .context {
-        .contact-social {
-          @include flex($justify: center);
-          figure {
-            width: 10%;
-          }
-        }
-      }
       @include flex($direction: column, $gap: 20px);
       .form {
         @include flex($align: center);
