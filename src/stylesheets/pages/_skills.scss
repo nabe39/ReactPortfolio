@@ -18,14 +18,9 @@
       @include flex($direction: column, $align: flex-start, $gap: 20px);
       figure {
         max-width: 50px;
-        max-height: 50px ;
-        img{
+        max-height: 50px;
+        img {
           width: 100%;
-        }
-      }
-      .text-wrapper {
-        figcaption {
-          font-size: $sizeH3;
         }
       }
     }
@@ -34,7 +29,7 @@
       .skills-card {
         @include flex($direction: column, $gap: 30px, $align: center);
         figure {
-          max-width: 100px;
+          width: 50px;
         }
         .text-wrapper {
           align-items: center;
@@ -43,6 +38,11 @@
           }
         }
       }
+    }
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
     }
   }
 }

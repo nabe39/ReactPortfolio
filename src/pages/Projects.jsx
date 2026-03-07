@@ -13,6 +13,18 @@ const project = [
     description:
       "This is my personal portfolio website to showcase my skills, projects, and background as a front-end developer. It is built using modern web technologies with a focus on responsive design and smooth user experience.",
   },
+  {
+    imgSrc: project2,
+    title: "Portfolio",
+    description:
+      "This is my personal portfolio website to showcase my skills, projects, and background as a front-end developer. It is built using modern web technologies with a focus on responsive design and smooth user experience.",
+  },
+  {
+    imgSrc: project2,
+    title: "Portfolio",
+    description:
+      "This is my personal portfolio website to showcase my skills, projects, and background as a front-end developer. It is built using modern web technologies with a focus on responsive design and smooth user experience.",
+  },
 ];
 export default function Projects() {
   return (
